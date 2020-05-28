@@ -91,7 +91,7 @@
    </header>
    <!-- banner video / logo / tagline -->
    <div class="banner-panel">
-      <video id="video-banner" class="background-video" autoplay="autoplay" loop="loop" muted="muted"><source></video>
+      <div id="video-div"></div>
       <noscript>      
          <video class="background-video" poster="video/drone.jpg" autoplay="autoplay" loop="loop" muted="muted">
             <source src="video/drone.mp4">
@@ -372,8 +372,15 @@
          day = parseInt(day);
       }
 
-      var video_el = document.getElementById("video-banner");
-      var source_el = video_el.firstElementChild;
+      var video_div = document.getElementById("video-div");
+
+      var video_el = document.createElement("VIDEO");
+      video_el.setAttribute("id", "video-banner");
+      video_el.setAttribute("class", "background-video");
+      video_el.setAttribute("muted", "muted");
+      video_el.setAttribute("autoplay", "autoplay");
+      video_el.setAttribute("loop", "loop");
+      var source_el = document.createElement("SOURCE");
       switch (day) {
          case 0:
             video_el.setAttribute("poster", "video/under-ice.jpg"); 
@@ -389,6 +396,8 @@
             source_el.setAttribute("src", "video/drone.mp4"); 
             break;
       }
+      video_el.appendChild(source_el);
+      video_div.appendChild(video_el);
    } 
 
    assignVideo();
