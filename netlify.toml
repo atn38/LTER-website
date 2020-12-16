@@ -3,12 +3,13 @@
   
 [[plugins]]
 package = "@algolia/netlify-plugin-crawler"
+
   [plugins.inputs]
   branches = ['master']
   mainBranch = "master"
   disabled = false
   pathPrefix = "/public"
-  # customDomain = "https://ble.lternet.edu"
+  customDomain = "https://ble.lternet.edu"
   renderJavaScript = false
 
 [[plugins]]
