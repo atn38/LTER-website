@@ -1,5 +1,13 @@
 [build]
   environment = { RUBY_VERSION = "2.6.2" }
+  
+[[plugins]]
+package = "@algolia/netlify-plugin-crawler"
+  [plugins.inputs]
+  branches = ['master']
+  disabled = false
+  pathPrefix = "public"
+  renderJavaScript = false
 
 [[plugins]]
 package = "netlify-plugin-checklinks"
