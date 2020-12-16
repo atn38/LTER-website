@@ -6,6 +6,15 @@
   # been specified, include it in the publish directory path.
   publish = "_site/" # this is relative to the "base directory"
   command = "eleventy"
+ 
+ [[plugins]]
+ package = "@algolia/netlify-plugin-crawler"
+  [plugins.inputs]
+  branches = ['11ty']
+  disabled = false
+  pathPrefix = "/_site"
+  renderJavaScript = false
+ 
 
 # [[plugins]]
 # package = "netlify-plugin-checklinks"
