@@ -12,7 +12,7 @@
   [plugins.inputs]
   branches = ['11ty']
   disabled = false
-  pathPrefix = "/_site"
+  pathPrefix = "public/_site"
   renderJavaScript = false
  
 
