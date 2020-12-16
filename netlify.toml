@@ -7,6 +7,7 @@ package = "@algolia/netlify-plugin-crawler"
   branches = ['master']
   disabled = false
   pathPrefix = "/public"
+  customDomain = "https://ble.lternet.edu"
   renderJavaScript = false
 
 [[plugins]]
