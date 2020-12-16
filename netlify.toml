@@ -6,7 +6,7 @@ package = "@algolia/netlify-plugin-crawler"
   [plugins.inputs]
   branches = ['master']
   disabled = false
-  pathPrefix = "public"
+  pathPrefix = ""
   renderJavaScript = false
 
 [[plugins]]
