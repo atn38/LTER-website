@@ -11,6 +11,7 @@ package = "@algolia/netlify-plugin-crawler"
   pathPrefix = "/public"
   customDomain = "ble.lternet.edu"
   renderJavaScript = false
+  template = "hierarchical"
 
 [[plugins]]
 package = "netlify-plugin-checklinks"
